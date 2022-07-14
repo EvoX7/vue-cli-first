@@ -1,22 +1,32 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <MyTitle/>
+
+    <!-- <img src="./assets/laptop-desk.png" alt="jumbotron"> -->
+    <HeroOne/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MyTitle from './components/MyTitle.vue'
+import HeroOne from './components/HeroOne.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    MyTitle,
+    HeroOne,
   }
 }
 </script>
 
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap');
+
+body {
+  background: #dee0e6;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -24,5 +34,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+img {
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
 }
 </style>
